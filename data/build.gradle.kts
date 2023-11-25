@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.myproject.data"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -34,6 +34,10 @@ android {
 
 dependencies {
 
+    // Project
+    implementation(project(":domain"))
+
+    // Other
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 }
