@@ -10,4 +10,4 @@ class FilterStorageImpl : FilterStorage {
     ).fetch(JSONFilter)
 }
 
-private val JSONFilter = "[ { \"id\": 1, \"name\": \"Новинка\" }, { \"id\": 2, \"name\": \"Вегетарианское блюдо\" }, { \"id\": 3, \"name\": \"Хит!\" }, { \"id\": 4, \"name\": \"Острое\" }, { \"id\": 5, \"name\": \"Со скидкой\" } ]"
+private val JSONFilter = "[ { \"id\": 1, \"name\": \"Новинка\" }, { \"id\": 2, \"name\": \"Вегетарианское блюдо\" }, { \"id\": 3, \"name\": \"Хит!\" }, { \"id\": 4, \"name\": \"Острое\" }, { \"id\": 5, \"name\": \"Экспресс-меню\" } ]"

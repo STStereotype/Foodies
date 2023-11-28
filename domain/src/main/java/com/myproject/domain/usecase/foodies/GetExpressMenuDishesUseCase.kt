@@ -3,8 +3,8 @@ package com.myproject.domain.usecase.foodies
 import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.repository.FoodiesRepository
 
-class GetSharpDishesUseCase(
+class GetExpressMenuDishesUseCase(
     private val foodiesRepository: FoodiesRepository
 ) {
-    suspend fun execute(): List<DishCard>? = foodiesRepository.getSharpDishes()
+    suspend fun execute(): List<DishCard>? = foodiesRepository.getExpressMenu()
 }

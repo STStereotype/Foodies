@@ -10,9 +10,9 @@ interface FoodiesRepository {
 
     suspend fun getHitsDishes(): List<DishCard>?
 
-    suspend fun getMealFreeDishes(): List<DishCard>?
+    suspend fun getSharpDishes(): List<DishCard>?
 
-    suspend fun getDiscountedDishes(): List<DishCard>?
+    suspend fun getExpressMenu(): List<DishCard>?
 
     suspend fun getDishesById(id: Int): DishDetails?
 

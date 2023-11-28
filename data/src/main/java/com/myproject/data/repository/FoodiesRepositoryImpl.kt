@@ -16,9 +16,9 @@ class FoodiesRepositoryImpl(
 
     override suspend fun getHitsDishes(): List<DishCard>? = searchDishesByTag(3)
 
-    override suspend fun getMealFreeDishes(): List<DishCard>? = searchDishesByTag(4)
+    override suspend fun getSharpDishes(): List<DishCard>? = searchDishesByTag(4)
 
-    override suspend fun getDiscountedDishes(): List<DishCard>? = searchDishesByTag(5)
+    override suspend fun getExpressMenu(): List<DishCard>? = searchDishesByTag(5)
 
     override suspend fun getDishesById(id: Int): DishDetails? {
         val dish = foodiesStorage.getDishes()

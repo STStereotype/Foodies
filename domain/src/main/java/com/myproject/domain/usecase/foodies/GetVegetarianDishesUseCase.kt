@@ -3,8 +3,8 @@ package com.myproject.domain.usecase.foodies
 import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.repository.FoodiesRepository
 
-class GetMealFreeDishesUseCase(
+class GetVegetarianDishesUseCase(
     private val foodiesRepository: FoodiesRepository
 ) {
-    suspend fun execute(): List<DishCard>? = foodiesRepository.getMealFreeDishes()
+    suspend fun execute(): List<DishCard>? = foodiesRepository.getVegetarianDishes()
 }
