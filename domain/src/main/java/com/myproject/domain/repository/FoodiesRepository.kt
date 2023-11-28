@@ -4,16 +4,19 @@ import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.models.dish.DishDetails
 
 interface FoodiesRepository {
+    suspend fun getNewDishes(): List<DishCard>?
 
-    fun getSharpDishes(): List<DishCard>
+    suspend fun getVegetarianDishes(): List<DishCard>?
 
-    fun getMealFreeDishes(): List<DishCard>
+    suspend fun getHitsDishes(): List<DishCard>?
 
-    fun getDiscountedDishes(): List<DishCard>
+    suspend fun getMealFreeDishes(): List<DishCard>?
 
-    fun getDishesById(): List<DishDetails>
+    suspend fun getDiscountedDishes(): List<DishCard>?
 
-    fun getDishesByCategory(): List<DishCard>
+    suspend fun getDishesById(id: Int): DishDetails?
 
-    fun getDishesByName(): List<DishCard>
+    suspend fun getDishesByCategoryId(id: Int): List<DishCard>?
+
+    suspend fun getDishesByName(name: String): List<DishCard>?
 }

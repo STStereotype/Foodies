@@ -2,10 +2,9 @@ package com.myproject.domain.usecase.foodies
 
 import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.repository.FoodiesRepository
-import com.myproject.domain.usecase.BaseUseCase
 
 class GetDishesByNameUseCase(
     private val foodiesRepository: FoodiesRepository
-) : BaseUseCase<List<DishCard>> {
-    override fun execute(): List<DishCard> = foodiesRepository.getDishesByName()
+) {
+    suspend fun execute(name: String): List<DishCard>? = foodiesRepository.getDishesByName(name)
 }

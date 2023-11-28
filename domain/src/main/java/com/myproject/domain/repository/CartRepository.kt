@@ -1,6 +1,7 @@
 package com.myproject.domain.repository
 
-interface CartRepository {
+import com.myproject.domain.models.dish.DishCard
 
-    fun placeAnOrder(): Boolean
+interface CartRepository {
+    suspend fun placeAnOrder(dishes: List<DishCard>): Boolean
 }
