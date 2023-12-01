@@ -4,6 +4,7 @@ import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.models.dish.DishDetails
 
 interface FoodiesRepository {
+    suspend fun getDishes(): List<DishCard>?
     suspend fun getNewDishes(): List<DishCard>?
 
     suspend fun getVegetarianDishes(): List<DishCard>?

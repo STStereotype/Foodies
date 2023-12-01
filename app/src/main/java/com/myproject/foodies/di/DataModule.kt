@@ -36,6 +36,7 @@ class DataModule {
     fun provideCartRepository(cartStorage: CartStorage) : CartRepository =
         CartRepositoryImpl(cartStorage)
 
+
     @Provides
     @Singleton
     fun provideCategoryStorage() : CategoryStorage = CategoryStorageImpl()

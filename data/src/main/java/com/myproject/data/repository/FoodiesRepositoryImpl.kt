@@ -9,6 +9,9 @@ import com.myproject.domain.repository.FoodiesRepository
 class FoodiesRepositoryImpl(
     private val foodiesStorage: FoodiesStorage
 ) : FoodiesRepository {
+    override suspend fun getDishes(): List<DishCard>? = foodiesStorage.getDishes()?.map {
+        convertFoodiesItemToDishCard(it)
+    }
 
     override suspend fun getNewDishes(): List<DishCard>? = searchDishesByTag(1)
 
@@ -65,7 +68,6 @@ class FoodiesRepositoryImpl(
             id = foodiesItem.id,
             name = foodiesItem.name,
             image = foodiesItem.image,
-            count = 0,
             price_current = foodiesItem.price_current,
             price_old = foodiesItem.price_old
         )
