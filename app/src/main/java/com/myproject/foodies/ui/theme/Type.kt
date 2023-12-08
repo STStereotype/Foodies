@@ -3,6 +3,7 @@ package com.myproject.foodies.ui.theme
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 private val patternBlackTextStyle = TextStyle(
@@ -25,6 +26,11 @@ val Typography = FoodiesTypography(
         fontSize = 14.sp,
         fontWeight = FontWeight.Normal,
         color = BaseLightPalette.gray
+    ),
+    listEmpty = patternBlackTextStyle.copy(
+        fontWeight = FontWeight.Normal,
+        color = BaseLightPalette.gray,
+        textAlign = TextAlign.Center,
     ),
     bigTitle = patternBlackTextStyle.copy(
         fontSize = 34.sp,
@@ -58,5 +64,9 @@ val Typography = FoodiesTypography(
     ),
     nameParamBottomSheet = patternBlackTextStyle.copy(
         fontWeight = FontWeight.Normal
+    ),
+    countActiveFilters = patternBlackTextStyle.copy(
+        color = BaseLightPalette.white,
+        fontSize = 11.sp
     ),
 )

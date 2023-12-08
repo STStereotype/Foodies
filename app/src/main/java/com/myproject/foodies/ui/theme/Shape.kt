@@ -5,5 +5,5 @@ import androidx.compose.ui.unit.dp
 
 val Shapes = FoodiesShape(
     button = RoundedCornerShape(8.dp),
-    bottomSheet = RoundedCornerShape(24.dp),
+    bottomSheet = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
 )

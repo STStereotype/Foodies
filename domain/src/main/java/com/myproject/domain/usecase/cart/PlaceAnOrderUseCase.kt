@@ -1,7 +1,6 @@
 package com.myproject.domain.usecase.cart
 
 import com.myproject.domain.models.cart.Cart
-import com.myproject.domain.models.dish.DishCard
 import com.myproject.domain.repository.CartRepository
 
 class PlaceAnOrderUseCase(

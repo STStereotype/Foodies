@@ -6,5 +6,5 @@ import com.myproject.domain.repository.FoodiesRepository
 class GetDishesUseCase(
     private val foodiesRepository: FoodiesRepository
 ) {
-    suspend fun execute(): List<DishCard>? = foodiesRepository.getDishes()
+    suspend fun execute(): List<DishCard> = foodiesRepository.getDishes()
 }

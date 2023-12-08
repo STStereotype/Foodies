@@ -10,15 +10,11 @@ import com.myproject.domain.usecase.cart.RemoveItemUseCase
 import com.myproject.domain.usecase.cart.SetItemUseCase
 import com.myproject.domain.usecase.category.GetCategoriesUseCase
 import com.myproject.domain.usecase.filter.GetFiltersUseCase
-import com.myproject.domain.usecase.foodies.GetExpressMenuDishesUseCase
 import com.myproject.domain.usecase.foodies.GetDishesByCategoryIdUseCase
+import com.myproject.domain.usecase.foodies.GetDishesByFiltersUseCase
 import com.myproject.domain.usecase.foodies.GetDishesByIdUseCase
 import com.myproject.domain.usecase.foodies.GetDishesByNameUseCase
 import com.myproject.domain.usecase.foodies.GetDishesUseCase
-import com.myproject.domain.usecase.foodies.GetHitsDishes
-import com.myproject.domain.usecase.foodies.GetNewDishesUseCase
-import com.myproject.domain.usecase.foodies.GetSharpDishesUseCase
-import com.myproject.domain.usecase.foodies.GetVegetarianDishesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -62,11 +58,6 @@ class DomainModule {
 
     @Provides
     @Singleton
-    fun provideGetExpressMenuDishesUseCase(foodiesRepository: FoodiesRepository) =
-        GetExpressMenuDishesUseCase(foodiesRepository)
-
-    @Provides
-    @Singleton
     fun provideGetDishesByCategoryIdUseCase(foodiesRepository: FoodiesRepository) =
         GetDishesByCategoryIdUseCase(foodiesRepository)
 
@@ -82,23 +73,8 @@ class DomainModule {
 
     @Provides
     @Singleton
-    fun provideGetHitsDishes(foodiesRepository: FoodiesRepository) =
-        GetHitsDishes(foodiesRepository)
-
-    @Provides
-    @Singleton
-    fun provideGetGetNewDishesUseCase(foodiesRepository: FoodiesRepository) =
-        GetNewDishesUseCase(foodiesRepository)
-
-    @Provides
-    @Singleton
-    fun provideGetSharpDishesUseCase(foodiesRepository: FoodiesRepository) =
-        GetSharpDishesUseCase(foodiesRepository)
-
-    @Provides
-    @Singleton
-    fun provideGetVegetarianDishesUseCase(foodiesRepository: FoodiesRepository) =
-        GetVegetarianDishesUseCase(foodiesRepository)
+    fun provideGetDishesByFilters(foodiesRepository: FoodiesRepository) =
+        GetDishesByFiltersUseCase(foodiesRepository)
 
     @Provides
     @Singleton

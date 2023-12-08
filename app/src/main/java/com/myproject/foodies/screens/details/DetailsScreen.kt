@@ -19,13 +19,22 @@ fun DetailsScreen(
 
     when (val state = viewState.value) {
         DetailsViewState.Loading -> DetailsViewLoading()
-        DetailsViewState.DisplayDetails -> DetailsViewDisplay(
-            navController = navController
+        is DetailsViewState.DisplayDetails -> DetailsViewDisplay(
+            state = state,
+            navController = navController,
+            onAddDishToCart = {
+                viewModel.addDishToCart(state.dish.value!!.dish.id)
+            }
         )
     }
 
     LaunchedEffect(viewState) {
-        delay(1000)
-        viewModel.send(event = DetailsEvent.EnterDetailsDisplay)
+        when (val state = viewState.value) {
+            DetailsViewState.Loading -> {
+                delay(500)
+                viewModel.send(event = DetailsEvent.EnterDetailsDisplay)
+            }
+            else -> { }
+        }
     }
 }

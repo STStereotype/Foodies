@@ -14,13 +14,16 @@ data class FoodiesColors(
     val main: Color,
     val white: Color,
     val black: Color,
+    val black12: Color,
     val gray: Color,
+    val lightGray: Color
 )
 
 data class FoodiesTypography(
     val primaryWhite: TextStyle,
     val primaryDark: TextStyle,
     val crossesGray: TextStyle,
+    val listEmpty: TextStyle,
     val secondaryDark: TextStyle,
     val secondaryGray: TextStyle,
     val bigTitle: TextStyle,
@@ -32,6 +35,7 @@ data class FoodiesTypography(
     val message: TextStyle,
     val titleBottomSheet: TextStyle,
     val nameParamBottomSheet: TextStyle,
+    val countActiveFilters: TextStyle
 )
 
 data class FoodiesShape(

@@ -6,5 +6,5 @@ interface CartRepository {
     suspend fun getCartDishes(): List<Cart>
     suspend fun addCartDish(cart: Cart)
     suspend fun removeCartDish(id: Int)
-    suspend fun placeAnOrder(dishes: List<Cart>): Boolean
+    suspend fun placeAnOrder(cart: List<Cart>): Boolean
 }

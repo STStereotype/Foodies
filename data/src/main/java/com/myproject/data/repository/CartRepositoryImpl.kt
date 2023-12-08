@@ -37,11 +37,13 @@ class CartRepositoryImpl(
         val dish = cart.dish
         return CartItem(
             id = dish.id,
+            categoryId = dish.categoryId,
             name = dish.name,
             image = dish.image,
             priceCurrent = dish.price_current,
             priceOld = dish.price_old,
-            count = cart.count
+            count = cart.count,
+            tagIds = dish.tag_ids
         )
     }
 
@@ -49,10 +51,12 @@ class CartRepositoryImpl(
         return Cart(
             DishCard(
                 id = cartItem.id,
+                categoryId = cartItem.categoryId,
                 name = cartItem.name,
                 image = cartItem.image,
                 price_current = cartItem.priceCurrent,
-                price_old = cartItem.priceOld
+                price_old = cartItem.priceOld,
+                tag_ids = cartItem.tagIds
             ),
             count = cartItem.count
         )

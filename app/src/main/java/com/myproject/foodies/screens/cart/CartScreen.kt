@@ -25,7 +25,7 @@ fun CartScreen(
     }
 
     LaunchedEffect(viewState) {
-        delay(1000)
+        delay(500)
         viewModel.send(event = CartEvent.EnterCartDisplay)
     }
 }
