@@ -90,7 +90,7 @@ class DetailsViewModel @AssistedInject constructor(
     private fun fetchDisplayDetails() {
         viewModelScope.launch {
             val viewModel = DetailsViewState.DisplayDetails(
-                dish = _dish
+                dish = _dish as StateFlow<DishDetails>
             )
             _viewState.emit(viewModel)
         }

@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.StateFlow
 sealed class DetailsViewState {
     object Loading: DetailsViewState()
     data class DisplayDetails(
-        val dish: StateFlow<DishDetails?>
+        val dish: StateFlow<DishDetails>
     ): DetailsViewState()
 }
