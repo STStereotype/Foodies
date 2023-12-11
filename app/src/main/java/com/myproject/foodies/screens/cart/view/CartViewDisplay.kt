@@ -85,7 +85,7 @@ fun CartViewDisplay(
         }
         if (cart.isNotEmpty())
             CartButton(
-                textButton = "Заказать за ${state.costDish.value}",
+                textButton = "Заказать за ${state.costDish.value} ₽",
                 onCart = state.placeAnOrder
             )
     }

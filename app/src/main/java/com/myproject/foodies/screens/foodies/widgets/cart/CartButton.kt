@@ -32,6 +32,8 @@ fun CartButton(
             .padding(horizontal = 16.dp, vertical = 12.dp)
     ) {
         Button(
+            modifier = Modifier
+                .fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
                 containerColor = FoodiesTheme.colors.main
             ),
@@ -46,7 +48,6 @@ fun CartButton(
                 )
             Text(
                 modifier = Modifier
-                    .fillMaxWidth()
                     .padding(start = 8.dp),
                 style = FoodiesTheme.typography.primaryWhite,
                 text = textButton,

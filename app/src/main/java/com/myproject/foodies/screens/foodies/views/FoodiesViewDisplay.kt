@@ -57,6 +57,10 @@ fun FoodiesViewDisplay(
             )
         }
         if (costDish != 0)
-            CartButton(textButton = "$costDish", onCart = onCart)
+            CartButton(
+                icon = true,
+                textButton = "$costDish ₽",
+                onCart = onCart
+            )
     }
 }
