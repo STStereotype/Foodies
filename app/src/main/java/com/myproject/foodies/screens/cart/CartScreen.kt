@@ -5,7 +5,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.navigation.NavController
 import com.myproject.foodies.screens.cart.models.CartEvent
-import com.myproject.foodies.screens.cart.models.CartViewState
+import com.myproject.foodies.screens.cart.models.viewstate.CartViewState
 import com.myproject.foodies.screens.cart.view.CartViewDisplay
 import com.myproject.foodies.screens.cart.view.CartViewLoading
 import kotlinx.coroutines.delay
@@ -19,7 +19,8 @@ fun CartScreen(
 
     when(val state = viewState.value) {
         CartViewState.Loading -> CartViewLoading()
-        CartViewState.DisplayCart -> CartViewDisplay(
+        is CartViewState.DisplayCart -> CartViewDisplay(
+            cartState = state,
             navController = navController
         )
     }

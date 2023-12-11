@@ -23,7 +23,7 @@ fun DetailsScreen(
             state = state,
             navController = navController,
             onAddDishToCart = {
-                viewModel.addDishToCart(state.dish.value!!.dish.id)
+                viewModel.addDishToCart(state.dish.value.dish.id)
             }
         )
     }

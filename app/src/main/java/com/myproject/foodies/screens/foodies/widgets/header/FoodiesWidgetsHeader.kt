@@ -25,7 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.myproject.domain.models.categoty.Category
 import com.myproject.foodies.R
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.header.FoodiesHeaderState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.header.FoodiesHeaderState
 import com.myproject.foodies.ui.theme.FoodiesTheme
 
 @Composable

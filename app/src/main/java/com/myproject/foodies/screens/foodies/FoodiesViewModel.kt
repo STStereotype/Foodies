@@ -1,11 +1,9 @@
 package com.myproject.foodies.screens.foodies
 
-import android.util.Log
 import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.myproject.data.App
 import com.myproject.domain.models.cart.Cart
 import com.myproject.domain.models.categoty.Category
 import com.myproject.domain.models.dish.DishCard
@@ -21,14 +19,14 @@ import com.myproject.domain.usecase.foodies.GetDishesByNameUseCase
 import com.myproject.foodies.base.Event
 import com.myproject.foodies.navigation.destination.FoodiesGraphDestinations
 import com.myproject.foodies.screens.foodies.models.FoodiesEvent
-import com.myproject.foodies.screens.foodies.models.FoodiesViewState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.header.FoodiesCategoryState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.DisplayFoodiesState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.header.FoodiesFilterState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.FoodiesState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.header.FoodiesHeaderState
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.header.FoodiesSearchState
-import com.myproject.foodies.screens.foodies.models.state.displaySearchState.DisplaySearchState
+import com.myproject.foodies.screens.foodies.models.viewstate.FoodiesViewState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.header.FoodiesCategoryState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.DisplayFoodiesState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.header.FoodiesFilterState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.FoodiesState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.header.FoodiesHeaderState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.header.FoodiesSearchState
+import com.myproject.foodies.screens.foodies.models.viewstate.displaysearchstate.DisplaySearchState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,6 +1,5 @@
 package com.myproject.foodies.screens.foodies
 
-import android.util.Log
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -9,9 +8,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.navigation.NavController
-import com.myproject.data.App
 import com.myproject.foodies.screens.foodies.models.FoodiesEvent
-import com.myproject.foodies.screens.foodies.models.FoodiesViewState
+import com.myproject.foodies.screens.foodies.models.viewstate.FoodiesViewState
 import com.myproject.foodies.screens.foodies.views.FoodiesViewDisplay
 import com.myproject.foodies.screens.foodies.views.FoodiesViewLoading
 import com.myproject.foodies.screens.foodies.views.FoodiesViewSearch

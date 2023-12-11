@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.myproject.foodies.screens.foodies.models.state.displayFoodiesState.FoodiesState
+import com.myproject.foodies.screens.foodies.models.viewstate.displayfoodiesstate.FoodiesState
 import com.myproject.foodies.screens.foodies.widgets.cart.CartButton
 import com.myproject.foodies.screens.foodies.widgets.foodies.ListDish
 import com.myproject.foodies.ui.theme.FoodiesTheme
@@ -57,6 +57,6 @@ fun FoodiesViewDisplay(
             )
         }
         if (costDish != 0)
-            CartButton(textButton = "Заказать за $costDish", onCart = onCart)
+            CartButton(textButton = "$costDish", onCart = onCart)
     }
 }

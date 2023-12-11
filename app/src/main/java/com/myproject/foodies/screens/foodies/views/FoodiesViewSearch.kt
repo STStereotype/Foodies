@@ -23,7 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.myproject.foodies.R
-import com.myproject.foodies.screens.foodies.models.state.displaySearchState.DisplaySearchState
+import com.myproject.foodies.screens.foodies.models.viewstate.displaysearchstate.DisplaySearchState
 import com.myproject.foodies.screens.foodies.widgets.foodies.ListDish
 import com.myproject.foodies.ui.theme.FoodiesTheme
 import com.myproject.foodies.ui.theme.modifier.shadow

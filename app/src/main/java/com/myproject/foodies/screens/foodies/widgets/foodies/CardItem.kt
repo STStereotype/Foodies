@@ -1,6 +1,7 @@
 package com.myproject.foodies.screens.foodies.widgets.foodies
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,7 +45,8 @@ fun DishItem(
         ),
         modifier = Modifier
             .padding(4.dp)
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .clickable { onDetails.invoke() },
         elevation = CardDefaults.cardElevation(
             defaultElevation = 0.dp
         ),
